@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 
+from phones.management.commands.import_phones import Command
+
 
 def index(request):
     return redirect('catalog')
