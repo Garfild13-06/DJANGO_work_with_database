@@ -5,6 +5,7 @@ from django.core.management.base import BaseCommand
 from phones.models import Phone
 from slugify import slugify
 
+
 class Command(BaseCommand):
     def add_arguments(self, parser):
         pass
@@ -14,6 +15,7 @@ class Command(BaseCommand):
             phones = list(csv.DictReader(file, delimiter=';'))
         for phone in phones:
             # TODO: Добавьте сохранение модели
+            pass
             Phone.objects.create(
                 id=phone["id"],
                 name=phone["name"],
